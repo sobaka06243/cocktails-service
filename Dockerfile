@@ -5,7 +5,6 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 
 COPY src/ src/
-COPY nuget.config .
 
 RUN dotnet restore "src/API/API.csproj"
 RUN dotnet test "src"
